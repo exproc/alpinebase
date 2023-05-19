@@ -23,7 +23,8 @@
     /tmp/*
     RUN mkdir /etc/supervisor.d 
     # add local files
+    COPY root/scripts/start.sh / 
     COPY  root/ /
-    RUN chmod +x /scripts/start.sh
+    RUN chmod +x /start.sh
     
-    ENTRYPOINT [ "sh" , "/scripts/start.sh" ] 
+    ENTRYPOINT [ "sh" , "/start.sh" ] 
