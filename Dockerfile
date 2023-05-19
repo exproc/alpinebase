@@ -21,9 +21,9 @@
     echo "**** cleanup ****" && \
     rm -rf \
     /tmp/*
-    RUN mkdir /etc/supervisor.d \
-    chmod +x /scripts/start.sh
+    RUN mkdir /etc/supervisor.d 
     # add local files
-     ADD root/ /
-
-   ENTRYPOINT [ "sh" , "/scripts/start.sh" ]
+    COPY  root/ /
+    RUN chmod +x /scripts/start.sh
+    
+    ENTRYPOINT [ "sh" , "/scripts/start.sh" ] 
