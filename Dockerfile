@@ -26,4 +26,4 @@ FROM scratch
     # add local files
      COPY root/ /
 
-    ENTRYPOINT ["/init"]
+   ENTRYPOINT [ "sh" , "/scripts/start.sh" ]
