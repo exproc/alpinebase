@@ -29,4 +29,4 @@
     RUN chmod +x /start.sh
     RUN ls -la /scripts && ls -la /etc
     RUN cat /etc/supervisord.conf
-    ENTRYPOINT [ "start.sh" ] 
+    ENTRYPOINT [ "/start.sh" ] 
