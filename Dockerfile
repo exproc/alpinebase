@@ -30,3 +30,4 @@
     RUN ls -la /scripts && ls -la /etc
     RUN cat /etc/supervisord.conf
     ENTRYPOINT [ "/start.sh" ] 
+    CMD ["supervisord", "-c", "/etc/supervisord.conf"]
