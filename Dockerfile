@@ -21,7 +21,7 @@
     echo "**** cleanup ****" && \
     rm -rf \
     /tmp/*
-    RUN ls -la /
+    RUN ls -la /scripts
     RUN mkdir /etc/supervisor.d 
     # add local files
     COPY root/scripts/start.sh / 
