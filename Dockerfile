@@ -10,6 +10,7 @@ FROM scratch
     procps-ng \
     shadow \
     nano \
+    
     tzdata && \
     echo "**** create abc user and make our folders ****" && \
     useradd -u 6000 -U -d /config -s /bin/false abc && \
@@ -21,7 +22,7 @@ FROM scratch
     echo "**** cleanup ****" && \
     rm -rf \
     /tmp/*
-
+    RUN mkdir /etc/supervisor.d
     # add local files
      COPY root/ /
 
