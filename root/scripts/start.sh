@@ -16,4 +16,4 @@ User GID:    $(id -g abc)
 "
 
 supervisord -c  /etc/supervisord.conf
-exec "$@"
+#exec "$@"
