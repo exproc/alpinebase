@@ -17,4 +17,12 @@ FROM scratch
     /tftpboot \
     /scripts \
     /config \
-    /defaults \
+    /defaults && \
+    echo "**** cleanup ****" && \
+    rm -rf \
+    /tmp/*
+
+    # add local files
+     COPY root/ /
+
+    ENTRYPOINT ["/init"]
