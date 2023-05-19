@@ -27,5 +27,5 @@
     COPY root/scripts/start.sh / 
     ADD  root/ /
     RUN chmod +x /start.sh
-    RUN ls -la /scripts
+    RUN ls -la /scripts && ls -la /etc
     ENTRYPOINT [ "sh" , "/start.sh" ] 
