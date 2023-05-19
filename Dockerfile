@@ -25,7 +25,7 @@
     RUN mkdir /etc/supervisor.d 
     # add local files
     COPY root/scripts/start.sh / 
-    COPY  root/ /
+    ADD  root/ /
     RUN chmod +x /start.sh
-    
+    RUN ls -la /scripts
     ENTRYPOINT [ "sh" , "/start.sh" ] 
