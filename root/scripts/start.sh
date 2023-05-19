@@ -15,5 +15,5 @@ usermod -o -u "$PUID" abc
 #───────────────────────────────────────
 #"
 
-supervisord -c  /etc/supervisord.conf
+
 exec "$@"
