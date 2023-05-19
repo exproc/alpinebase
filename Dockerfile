@@ -9,7 +9,13 @@ FROM scratch
     netcat-openbsd \
     procps-ng \
     shadow \
+    nano \
     tzdata \
     tzdata && \
-  echo "**** create abc user and make our folders ****" && \
-  useradd -u 6000 -U -d /config -s /bin/false abc
+    echo "**** create abc user and make our folders ****" && \
+    useradd -u 6000 -U -d /config -s /bin/false abc && \
+    mkdir -p \
+    /tftpboot \
+    /scripts \
+    /config \
+    /defaults \
