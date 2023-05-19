@@ -1,6 +1,6 @@
 FROM scratch
  RUN apk add --no-cache \
-    alpine-release \
+    supervisor \
     bash \
     ca-certificates \
     coreutils \
